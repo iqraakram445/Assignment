@@ -15,13 +15,7 @@ export const AddProjectModal = ({ open, onClose, onAdd }) => {
   const [description, setDescription] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [image, setImage] = useState([]);
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
-    maxFiles: 1,
-    onDrop: (acceptedFiles) => {
-      setImage(acceptedFiles);
-    },
-  });
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
